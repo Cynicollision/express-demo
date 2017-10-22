@@ -16,6 +16,13 @@ It's still very much WIP. Don't mind the TODOs.
   - There's the [Node.js Tools extension for Visual Studio](https://www.visualstudio.com/vs/node-js/).
   - Or use `node inspect` if you're hardcore.
 
+### Table of Contents
+1. [Hello World](/1-hello-world/readme.md)
+1. [Middleware](/2-middleware/readme.md)
+1. [RESTful API](/3-api/readme.md)
+1. [Data Access](/4-data-access/readme.md)
+1. [Rendering Web Pages](/5-rendering-pages/readme.md)
+
 ### Resources
 - [Node.js](https://nodejs.org)
     - [Express](https://expressjs.com)
