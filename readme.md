@@ -3,10 +3,12 @@ This repository contains an introduction to using the Node.js web application fr
 
 It's still very much WIP. Don't mind the TODOs.
 
-### Tools I'll be using
-- Node.js, npm, node_modules
-- Postman for testing our API
-- VSCode IDE and Node.js debugger
+### Table of Contents
+1. [Hello World](/1-hello-world/readme.md)
+1. [Middleware](/2-middleware/readme.md)
+1. [RESTful API](/3-api/readme.md)
+1. [Data Access](/4-data-access/readme.md)
+1. [Rendering Web Pages](/5-rendering-pages/readme.md)
 
 ### Environment setup
 - Install Node.js and npm (included)
@@ -16,12 +18,11 @@ It's still very much WIP. Don't mind the TODOs.
   - There's the [Node.js Tools extension for Visual Studio](https://www.visualstudio.com/vs/node-js/).
   - Or use `node inspect` if you're hardcore.
 
-### Table of Contents
-1. [Hello World](/1-hello-world/readme.md)
-1. [Middleware](/2-middleware/readme.md)
-1. [RESTful API](/3-api/readme.md)
-1. [Data Access](/4-data-access/readme.md)
-1. [Rendering Web Pages](/5-rendering-pages/readme.md)
+### Running the code samples
+1. Clone this repository
+1. Run `npm install` from this directory
+1. Run `node <filename>` from within any of the numbered subdirectories (e.g. `node hello-world`)
+   - If you're using VSCode, just open any code sample file and press F5 to start debugging
 
 ### Resources
 - [Node.js](https://nodejs.org)

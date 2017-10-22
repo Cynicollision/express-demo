@@ -1,4 +1,4 @@
-# API
+# RESTful API
 [Intro to Express](https://github.com/Cynicollision/express-demo) > Part 3: Defining an API
 
 ## API Example: Request handling
