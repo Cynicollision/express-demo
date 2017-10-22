@@ -4,6 +4,7 @@ This repository contains an introduction to using the Node.js web application fr
 It's still very much WIP. Don't mind the TODOs.
 
 ### Table of Contents
+0. [Introduction](/0-intro/readme.md)
 1. [Hello World](/1-hello-world/readme.md)
 1. [Middleware](/2-middleware/readme.md)
 1. [RESTful API](/3-api/readme.md)
