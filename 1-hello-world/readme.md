@@ -1,4 +1,4 @@
-# Express JS
+# Hello World
 [Intro to Express](https://github.com/Cynicollision/express-demo) > Part 1: Hello World
 
 ## What is Express?
