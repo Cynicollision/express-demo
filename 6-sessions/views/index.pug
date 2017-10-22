@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    title Demo Blog
+  body
+    h1 Blog Posts
+    ul
+      each post in blogPosts
+        li 
+          a(href= '/post/' + post.id) #{post.title}

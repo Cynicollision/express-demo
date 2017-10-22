@@ -1,51 +1,48 @@
 const express = require('express');
 const morgan = require('morgan');
-const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const session = require('express-session');
 
 const app = express();
 
 // configure middleware
 app.use(morgan('dev'));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(session({
+  secret: 'wmdtug',
+  resave: false,
+  saveUninitialized: true,
+}))
+
+// configure view engine
+app.set('views', __dirname + '/views');
+app.set('view engine', 'pug');
 
 // configure routes
-app.post('/api/posts', (req, res) => {
-  let blogPostData = req.body;
+app.get('*/post/:id', function (req, res) {
 
-  BlogPost.create(blogPostData, (err, blogPost) => {
+  // TODO: set number of times this post has been viewed in session data
+  //  something like e.g. req.session.someData = 'foo';
 
-    if (err) {
-      res.send(500, err);
-    }
-    else {
-      res.send(201);
-    }
-  });
-});
-
-app.get('/api/posts', (req, res) => {
-
-  BlogPost.find({}, (err, post) => {
+  BlogPost.findById(req.params.id, (err, post) => {
 
     if (err) {
       res.send(500, err);
     }
     else {
-      res.send(200, post);
+      res.render('post', { currentPost: post });
     }
   });
 });
 
-app.get('/api/posts/:id', (req, res) => {
-
-  BlogPost.findById(req.params.id, (err, posts) => {
+app.get('*', function (req, res) {
     
+  BlogPost.find({}, (err, posts) => {
+
     if (err) {
-        res.send(500, err);
+      res.send(500, err);
     }
     else {
-      res.send(200, posts);
+      res.render('index', { blogPosts: posts });
     }
   });
 });
@@ -63,7 +60,6 @@ mongoose.connection.once('open', () => {
   console.log('Connected to "demo" db');
 });
 
-// start the server
 app.listen(3000, () => {
   console.log('Listening on port 3000');
 });

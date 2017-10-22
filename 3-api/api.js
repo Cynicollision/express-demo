@@ -34,6 +34,7 @@ app.post('/api/foo/:id/:otherParam', (req, res) => {
   res.send(200, response);
 });
 
+// start the server
 app.listen(3000, () => {
   console.log('Listening on port 3000');
 });

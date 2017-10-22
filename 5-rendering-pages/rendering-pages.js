@@ -4,13 +4,10 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-// define a model
-const BlogPost = mongoose.model('BlogPost', mongoose.Schema({
-  title: { type: String },
-  content: { type: String },
-  postedOn: Date,
-}));
+// configure middleware
+app.use(morgan('dev'));
 
+// configure view engine
 app.set('views', __dirname + '/views');
 app.set('view engine', 'pug');
 
@@ -40,6 +37,13 @@ app.get('*', function (req, res) {
     }
   });
 });
+
+// define a model
+const BlogPost = mongoose.model('BlogPost', mongoose.Schema({
+  title: { type: String },
+  content: { type: String },
+  postedOn: Date,
+}));
 
 // connect to mongoDB
 mongoose.connect('mongodb://dummy:hAcKm3@localhost:27017/demo', { useMongoClient: true });
