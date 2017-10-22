@@ -1,5 +1,5 @@
 # API
-[Intro to Express](https://github.com/Cynicollision/express-demo) > Part 1: Defining an API
+[Intro to Express](https://github.com/Cynicollision/express-demo) > Part 3: Defining an API
 
 ## API Example: Request handling
 This code sample demonstrates basic handling of GET and POST requests.

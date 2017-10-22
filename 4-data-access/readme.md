@@ -1,5 +1,5 @@
 # Data Access
-[Intro to Express](https://github.com/Cynicollision/express-demo) > Part 4: Data Acces
+[Intro to Express](https://github.com/Cynicollision/express-demo) > Part 4: Data Access
 
 ## Saving and retrieving MongoDB documents
 This demo shows how to interact with a [MongoDB](https://www.mongodb.com/) database using [Mongoose](http://mongoosejs.com), an object modelling library.
