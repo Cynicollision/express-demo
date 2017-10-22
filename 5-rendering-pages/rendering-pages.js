@@ -17,26 +17,26 @@ app.set('view engine', 'pug');
 // configure routes
 app.get('*/post/:id', function (req, res) {
 
-    BlogPost.findById(req.params.id, (err, post) => {
+  BlogPost.findById(req.params.id, (err, post) => {
 
     if (err) {
-        res.send(500, err);
+      res.send(500, err);
     }
     else {
-        res.render('post', { currentPost: post });
+      res.render('post', { currentPost: post });
     }
   });
 });
 
 app.get('*', function (req, res) {
     
-    BlogPost.find({}, (err, posts) => {
+  BlogPost.find({}, (err, posts) => {
 
     if (err) {
-        res.send(500, err);
+      res.send(500, err);
     }
     else {
-        res.render('index', { blogPosts: posts });
+      res.render('index', { blogPosts: posts });
     }
   });
 });
