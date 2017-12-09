@@ -1,8 +1,8 @@
-const express = require('express');
-const morgan = require('morgan');
-const mongoose = require('mongoose');
+var express = require('express');
+var morgan = require('morgan');
+var mongoose = require('mongoose');
 
-const app = express();
+var app = express();
 
 // configure middleware
 app.use(morgan('dev'));
@@ -15,23 +15,23 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'pug');
 
 // define a model
-const BlogPost = mongoose.model('BlogPost', mongoose.Schema({
+const BlogEntry = mongoose.model('BlogEntry', mongoose.Schema({
     title: { type: String },
     content: { type: String },
     postedOn: Date,
 }));
 
 // configure routes
-app.get('/post/:id', (req, res) => {
+app.get('/blogentry/:id', (req, res) => {
 
-    BlogPost.findById(req.params.id, (err, post) => {
+    BlogEntry.findById(req.params.id, (err, entry) => {
 
         if (err) {
             // e.g. post doesn't exist by ID
             res.send(500, err);
         }
         else {
-            res.render('post', { currentPost: post });
+            res.render('entry', { currentPost: entry });
         }
     });
 });
@@ -39,13 +39,13 @@ app.get('/post/:id', (req, res) => {
 // define index route
 app.get('/', (req, res) => {
     
-    BlogPost.find({}, (err, posts) => {
+    BlogEntry.find({}, (err, entries) => {
 
         if (err) {
             res.send(500, err);
         }
         else {
-            res.render('index', { blogPosts: posts });
+            res.render('index', { blogPosts: entries });
         }
     });
 });

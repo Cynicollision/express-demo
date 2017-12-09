@@ -1,10 +1,10 @@
-const express = require('express');
-const morgan = require('morgan');
-const mongoose = require('mongoose');
-const session = require('express-session');
-const bodyParser = require('body-parser');
+var express = require('express');
+var morgan = require('morgan');
+var mongoose = require('mongoose');
+var session = require('express-session');
+var bodyParser = require('body-parser');
 
-const app = express();
+var app = express();
 
 // configure middleware
 app.use(morgan('dev'));
@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({
 })); 
 
 // define a model
-const ShopItem = mongoose.model('ShopItem', mongoose.Schema({
+var ShopItem = mongoose.model('ShopItem', mongoose.Schema({
     sku: { type: Number },
     description: { type: String },
 }));
@@ -109,11 +109,11 @@ app.listen(3000, () => {
 });
 
 // create some default items
-ShopItem.remove({}, (err,removed) => {
-    [
-        new ShopItem({ sku: 100, description: 'Bicycle' }),
-        new ShopItem({ sku: 200, description: 'Stuffed Doll' }),
-        new ShopItem({ sku: 300, description: 'Handy Wrench' }),
-        new ShopItem({ sku: 400, description: 'Yo-Yo' }),
-    ].forEach(item => item.save());
-});
+// ShopItem.remove({}, (err,removed) => {
+//     [
+//         new ShopItem({ sku: 100, description: 'Bicycle' }),
+//         new ShopItem({ sku: 200, description: 'Stuffed Doll' }),
+//         new ShopItem({ sku: 300, description: 'Handy Wrench' }),
+//         new ShopItem({ sku: 400, description: 'Yo-Yo' }),
+//     ].forEach(item => item.save());
+// });

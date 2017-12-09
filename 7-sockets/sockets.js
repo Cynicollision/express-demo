@@ -35,6 +35,7 @@ io.on('connection', function (socket) {
     });
 
     socket.on('disconnect', function () {
+        console.log(`somebody disconnected (socket.id=${socket.id})`);
 
         if (socket._username) {
             io.emit('receive', { messageText: '<disconnected>', sender: socket._username });

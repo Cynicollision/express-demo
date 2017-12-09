@@ -1,8 +1,8 @@
 // load the dependency
-const express = require('express');
+var express = require('express');
 
 // create the Express application
-const app = express();
+var app = express();
 
 // configure a default GET route
 app.get('/', (req, res) => { 

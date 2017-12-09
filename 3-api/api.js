@@ -1,8 +1,8 @@
-const express = require('express');
-const morgan = require('morgan');
-const bodyParser = require('body-parser');
+var express = require('express');
+var morgan = require('morgan');
+var bodyParser = require('body-parser');
 
-const app = express();
+var app = express();
 
 // configure middleware
 app.use(morgan('dev'));

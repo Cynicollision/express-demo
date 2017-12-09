@@ -1,7 +1,7 @@
-const express = require('express');
-const morgan = require('morgan');
+var express = require('express');
+var morgan = require('morgan');
 
-const app = express();
+var app = express();
 
 // configure middleware
 // app.use(morgan('dev')) // concise

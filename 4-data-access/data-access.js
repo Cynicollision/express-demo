@@ -1,26 +1,26 @@
-const express = require('express');
-const morgan = require('morgan');
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
+var express = require('express');
+var morgan = require('morgan');
+var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
 
-const app = express();
+var app = express();
 
 // configure middleware
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // define a model
-const BlogPost = mongoose.model('BlogPost', mongoose.Schema({
+var BlogEntry = mongoose.model('BlogEntry', mongoose.Schema({
     title: { type: String },
     content: { type: String },
     postedOn: Date,
 }));
 
 // configure routes
-app.post('/api/posts', (req, res) => {
-    let blogPostData = req.body;
+app.post('/api/blogentry', (req, res) => {
+    let blockEntryData = req.body;
 
-    BlogPost.create(blogPostData, (err, blogPost) => {
+    BlogEntry.create(blockEntryData, (err, entry) => {
 
         if (err) {
             res.send(500, err);
@@ -31,22 +31,22 @@ app.post('/api/posts', (req, res) => {
     });
 });
 
-app.get('/api/posts', (req, res) => {
+app.get('/api/blogentry', (req, res) => {
 
-    BlogPost.find({}, (err, post) => {
+    BlogEntry.find({}, (err, entry) => {
 
         if (err) {
             res.send(500, err);
         }
         else {
-            res.send(200, post);
+            res.send(200, entry);
         }
     });
 });
 
-app.get('/api/posts/:id', (req, res) => {
+app.get('/api/blogentry/:id', (req, res) => {
 
-    BlogPost.findById(req.params.id, (err, posts) => {
+    BlogEntry.findById(req.params.id, (err, posts) => {
       
         if (err) {
             res.send(500, err);

@@ -1,9 +1,9 @@
 (() => {
     var socket = io.connect('http://localhost:3000');
     
-    socket.on('receive', function (data) {
-        var formattedMessage = `[${data.sender}] ${data.messageText}`;
+    socket.on('receive', data => {
         var messagesElement = document.getElementById('messageList');
+        var formattedMessage = formatChatMessage(data);
 
         messagesElement.value += formattedMessage + '\n';
     });
@@ -17,4 +17,11 @@
     
         socket.emit('send', { messageText: messageText, sender: sender });
     };
+
+    function formatChatMessage(data) {
+        var time = new Date().toTimeString();
+        var now = time.substr(0, time.indexOf(' '));
+
+        return `${now} [${data.sender}] ${data.messageText}`;
+    }
 })();
