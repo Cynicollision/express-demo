@@ -14,7 +14,7 @@ npm install pug
 app.set('views', __dirname + '/views');
 app.set('view engine', 'pug');
 
-app.get('*', function (req, res) {
+app.get('*', (req, res) => {
   res.render('index');
 });
 ```

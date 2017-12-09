@@ -9,61 +9,61 @@ const app = express();
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// define a model
+const BlogPost = mongoose.model('BlogPost', mongoose.Schema({
+    title: { type: String },
+    content: { type: String },
+    postedOn: Date,
+}));
+
 // configure routes
 app.post('/api/posts', (req, res) => {
-  let blogPostData = req.body;
+    let blogPostData = req.body;
 
-  BlogPost.create(blogPostData, (err, blogPost) => {
+    BlogPost.create(blogPostData, (err, blogPost) => {
 
-    if (err) {
-      res.send(500, err);
-    }
-    else {
-      res.send(201);
-    }
-  });
+        if (err) {
+            res.send(500, err);
+        }
+        else {
+            res.send(201);
+        }
+    });
 });
 
 app.get('/api/posts', (req, res) => {
 
-  BlogPost.find({}, (err, post) => {
+    BlogPost.find({}, (err, post) => {
 
-    if (err) {
-      res.send(500, err);
-    }
-    else {
-      res.send(200, post);
-    }
-  });
+        if (err) {
+            res.send(500, err);
+        }
+        else {
+            res.send(200, post);
+        }
+    });
 });
 
 app.get('/api/posts/:id', (req, res) => {
 
-  BlogPost.findById(req.params.id, (err, posts) => {
-    
-    if (err) {
-        res.send(500, err);
-    }
-    else {
-      res.send(200, posts);
-    }
-  });
+    BlogPost.findById(req.params.id, (err, posts) => {
+      
+        if (err) {
+            res.send(500, err);
+        }
+        else {
+            res.send(200, posts);
+        }
+    });
 });
-
-// define a model
-const BlogPost = mongoose.model('BlogPost', mongoose.Schema({
-  title: { type: String },
-  content: { type: String },
-  postedOn: Date,
-}));
 
 // connect to mongoDB
 mongoose.connect('mongodb://dummy:hAcKm3@localhost:27017/demo', { useMongoClient: true });
 mongoose.connection.once('open', () => {
-  console.log('Connected to "demo" db');
+    console.log('Connected to demo db');
 });
 
 // start the server
 app.listen(3000, () => {
-  console.log('Listening on port 3000');
+    console.log('Listening on port 3000');
 });

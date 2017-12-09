@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title Demo Store
+    link(type="text/css" rel="stylesheet" href="public/style.css")
+    script(type="text/javascript" src="public/storeApp.js")
+  body
+    h1 Checkout
+    table(border=1, cellpadding=10)
+      tr 
+        td(style="font-weight: bold;") SKU
+        td(style="font-weight: bold;") Item Description
+        td(style="font-weight: bold;") Quantity
+
+      each item in cart
+        tr
+          td #{item.sku}
+          td #{item.description}
+          td #{item.quantity}
+    p    
+      a(href="/") Continue Shopping

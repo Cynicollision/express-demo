@@ -12,26 +12,26 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // simple POST
 app.post('/api/test', (req, res) => {
-  res.send(200, 'Hello from /test !');
+    res.send(200, 'Hello from /test !');
 });
 
 // GET with query
 app.get('/api/getstuff', (req, res) => {
-  let name = req.query.name;
+    var name = req.query.name;
 
-  res.send(200, `Getting stuff with the name: ${name}`);
+    res.send(200, `Getting stuff with the name: ${name}`);
 });
 
 // POST with URL parameters and a body
 app.post('/api/foo/:id/:otherParam', (req, res) => {
 
-  let response = {
-    id: req.params.id,
-    otherParam: req.params.otherParam,
-    body: req.body, // req.body is defined by body-parser middleware
-  };
+    var response = {
+        id: req.params.id,
+        otherParam: req.params.otherParam,
+        body: req.body, // req.body is defined by body-parser middleware
+    };
 
-  res.send(200, response);
+    res.send(200, response);
 });
 
 // start the server

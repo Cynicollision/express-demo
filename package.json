@@ -1,5 +1,9 @@
 {
   "name": "expressjs_demo",
+  "repository": { 
+    "type" : "git", 
+    "url" : "https://github.com/Cynicollision/express-demo.git"
+  },
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

@@ -1,10 +1,14 @@
 doctype html
 html
   head
-    title Demo Blog
+    title Demo Store
+    link(type="text/css" rel="stylesheet" href="public/style.css")
+    script(type="text/javascript" src="public/storeApp.js")
   body
-    h1 Blog Posts
+    h1 Catalog
     ul
-      each post in blogPosts
+      each item in catalog
         li 
-          a(href= '/post/' + post.id) #{post.title}
+          button(onclick="addItemToCart(" + item.sku + ")") #{item.description}
+    p
+      a(href="/checkout") Checkout
