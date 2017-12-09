@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title Demo Chat
+    link(type="text/css" rel="stylesheet" href="public/style.css")
+    script(type="text/javascript" src="public/socket.io.js")
+    script(type="text/javascript" src="public/chatApp.js")
+  body
+    textarea(id="messageList" rows=16, cols=100)
+    p
+      label Name 
+      input(id="username" type="text")
+    p
+      label Message 
+      input(id="message" type="text")
+      button(onclick="sendChatMessage()") Send

@@ -31,6 +31,7 @@ It's still very much WIP. Don't mind the TODOs.
     - [Express](https://expressjs.com)
     - [Mongoose](http://mongoosejs.com)
     - [Pug](https://pugjs.org) (formally 'jade')
+    - [Socket.IO](https://socket.io)
 - [MongoDB](https://www.mongodb.com)
 - [Postman](https://www.getpostman.com)
 - [VSCode](https://code.visualstudio.com)
