@@ -11,6 +11,7 @@ It's still very much WIP. Don't mind the TODOs.
 1. [Data Access](/4-data-access/readme.md)
 1. [Rendering Web Pages](/5-rendering-pages/readme.md)
 1. [Session Management](/6-sessions/readme.md)
+1. [Sockets](/7-sockets/readme.md)
 
 ### Environment setup
 - Install Node.js and npm (included)
