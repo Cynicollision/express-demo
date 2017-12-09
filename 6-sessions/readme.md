@@ -1,4 +1,4 @@
-# Rendering Web Pages
+# Session Management
 [Intro to Express](https://github.com/Cynicollision/express-demo) > Part 6: Session Management
 
 ## Managing server-side session data

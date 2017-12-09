@@ -4,13 +4,13 @@ This repository contains an introduction to using the Node.js web application fr
 It's still very much WIP. Don't mind the TODOs.
 
 ### Table of Contents
-0. [Introduction](/0-intro/readme.md)
-1. [Hello World](/1-hello-world/readme.md)
-1. [Middleware](/2-middleware/readme.md)
-1. [RESTful API](/3-api/readme.md)
-1. [Data Access](/4-data-access/readme.md)
-1. [Rendering Web Pages](/5-rendering-pages/readme.md)
-1. [Session Management](/6-sessions/readme.md)
+0. [Introduction](/0-intro/)
+1. [Hello World](/1-hello-world/)
+1. [Middleware](/2-middleware/)
+1. [RESTful API](/3-api/)
+1. [Data Access](/4-data-access/)
+1. [Rendering Web Pages](/5-rendering-pages/)
+1. [Session Management](/6-sessions/)
 1. [Sockets](/7-sockets/)
 
 ### Environment setup

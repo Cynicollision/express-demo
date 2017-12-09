@@ -1,7 +1,7 @@
-# Rendering Web Pages
+# Sockets
 [Intro to Express](https://github.com/Cynicollision/express-demo) > Part 7: Sockets
 
-## Sending messages to the client with sockets
+## Real-time Bidirectional Event-based Communication
 A basic chat application that demonstrates real-time communication between clients using [Socket.IO](https://socket.io). 
 
 ### Installation
