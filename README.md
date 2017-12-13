@@ -1,7 +1,5 @@
 # Intro to Express
-This repository contains an introduction to using the Node.js web application framework Express. I'm creating this in preparation for a presentation I'll be doing in December 2017 for the [Western MA Development Technology User Group](https://www.meetup.com/Western-Mass-Development-Technology-Users-Group/).
-
-It's still very much WIP. Don't mind the TODOs.
+This repository contains an introduction to using the Node.js web application framework Express. I'm creating this in preparation for a presentation I'll be doing December 13, 2017 for the [Western MA Development Technology User Group](https://www.meetup.com/Western-Mass-Development-Technology-Users-Group/).
 
 ### Table of Contents
 0. [Introduction](/0-intro/)
@@ -18,7 +16,7 @@ It's still very much WIP. Don't mind the TODOs.
   - Installs globally (PATH) for convenience
 - Use any text editor of your choice. Having a debugger is nice but optional.
   - Node.js debugging is supported out-of-the-box by VSCode.
-  - There's the [Node.js Tools extension for Visual Studio](https://www.visualstudio.com/vs/node-js/).
+  - There's also a [Node.js Tools extension for Visual Studio](https://www.visualstudio.com/vs/node-js/).
   - Or use `node inspect` if you're hardcore.
 
 ### Running the code samples

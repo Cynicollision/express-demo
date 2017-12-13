@@ -4,6 +4,8 @@
 ## Saving and retrieving MongoDB documents
 This demo shows how to interact with a [MongoDB](https://www.mongodb.com/) database using [Mongoose](http://mongoosejs.com), an object modelling library.
 
+Note: a MongoDB connection is required for this code sample (see call to `mongoose.connect` in data-access.js).
+
 ### Installation
 ```
 npm install mongoose

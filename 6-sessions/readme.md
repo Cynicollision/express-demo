@@ -4,10 +4,11 @@
 ## Managing server-side session data
 This code sample demonstrates a simple shopping-cart implementation using in-memory sessions on the server. 
 
+Note: a MongoDB connection is required for this demo (see call to `mongoose.connect` in sessions.js).
+
 ### Installation
 ```
 npm install express-session
-npm install body-parser
 ````
 
 ### Configuration/Usage
@@ -18,13 +19,8 @@ app.use(session({
   saveUninitialized: true,
 }));
 
-app.use(bodyParser.urlencoded({ 
-  extended: true
-})); 
-
 app.post('/foo', (req, res) => {
   var session = req.session;
-  var body = req.body;
 
   res.send(200);
 });

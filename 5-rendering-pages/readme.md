@@ -4,6 +4,8 @@
 ## Using the Pug template engine 
 This code sample shows how to render web pages using [pug templates](https://pugjs.org).
 
+Note: a MongoDB connection is required for this demo (see call to `mongoose.connect` in rendering-pages.js).
+
 ### Installation
 ```
 npm install pug

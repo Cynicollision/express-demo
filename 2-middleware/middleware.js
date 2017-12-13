@@ -8,7 +8,6 @@ var app = express();
 app.use(morgan('combined')) // verbose
 
 // custom middleware to prevent caching of GET requests
-//  (TODO: confirm this is all needed/accurate)
 app.use(function noCache(req, res, next) {
     res.header('Cache-Control', 'no-cache, no-store, must-revalidate');
     res.header('Pragma', 'no-cache');

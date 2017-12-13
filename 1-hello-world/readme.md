@@ -7,7 +7,7 @@ Express is a:
 
 Various database systems, authentication schemes, and template engines are supported by third-party Node modules.
 
-As of 10/22/2017 the current version is 4.16.1 which is what I'm using in this repository. Version 5 is still in its alpha stage and contains some breaking changes [listed here](https://expressjs.com/en/guide/migrating-5.html).
+The current version is 4.16.1 which is what I'm using in this repository. Version 5 is still in its alpha stage and contains some breaking changes [listed here](https://expressjs.com/en/guide/migrating-5.html).
 
 ### Installation
 
